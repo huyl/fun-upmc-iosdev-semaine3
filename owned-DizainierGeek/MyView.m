@@ -50,13 +50,13 @@
         [self addSubview:self.geekSwitch];
         
         _geekSwitchLabel = [[[UILabel alloc] init] autorelease];
-        [self.geekSwitchLabel setTextAlignment:NSTextAlignmentCenter];
-        [self.geekSwitchLabel setText:@"mode Geek"];
+        self.geekSwitchLabel.textAlignment = NSTextAlignmentCenter;
+        self.geekSwitchLabel.text = @"mode Geek";
         [self addSubview:self.geekSwitchLabel];
         
         _dizainesLabel = [[[UILabel alloc] init] autorelease];
-        [self.dizainesLabel setTextAlignment:NSTextAlignmentCenter];
-        [self.dizainesLabel setText:@"Dizaines"];
+        self.dizainesLabel.textAlignment = NSTextAlignmentCenter;
+        self.dizainesLabel.text = @"Dizaines";
         [self addSubview:self.dizainesLabel];
         
         _dizainesSeg = [[[UISegmentedControl alloc] init] autorelease];
@@ -65,8 +65,8 @@
         [self addSubview:self.dizainesSeg];
         
         _unitesLabel = [[[UILabel alloc] init] autorelease];
-        [self.unitesLabel setTextAlignment:NSTextAlignmentCenter];
-        [self.unitesLabel setText:@"Unités"];
+        self.unitesLabel.textAlignment = NSTextAlignmentCenter;
+        self.unitesLabel.text = @"Unités";
         [self addSubview:self.unitesLabel];
         
         _unitesSeg = [[[UISegmentedControl alloc] init] autorelease];
@@ -75,7 +75,7 @@
         [self addSubview:self.unitesSeg];
         
         _numberDisplay = [[[UILabel alloc] init] autorelease];
-        [self.numberDisplay setTextAlignment:NSTextAlignmentCenter];
+        self.numberDisplay.textAlignment = NSTextAlignmentCenter;
         [self addSubview:self.numberDisplay];
         
         _slider = [[[UISlider alloc] init] autorelease];
@@ -122,19 +122,19 @@
 //    NSLog(@"bounds %@", NSStringFromCGSize(self.bounds.size));
     float vertShift = UIInterfaceOrientationIsLandscape(toInterfaceOrientation) ? .85 : 1;
     
-    [self.stepper setFrame:CGRectMake(20, 32 * vertShift, 94, 29)];
-    [self.geekSwitch setFrame:CGRectMake(self.bounds.size.width - 20 - 51, 31 * vertShift, 51, 31)];
-    [self.geekSwitchLabel setFrame:CGRectMake(self.bounds.size.width - 77 - 91, 36 * vertShift, 91, 21)];
-    [self.dizainesLabel setFrame:CGRectMake((self.bounds.size.width - 69) / 2, 84 * vertShift, 69, 21)];
-    [self.dizainesSeg setFrame:CGRectMake(20, 113 * vertShift, self.bounds.size.width - 40, 29)];
-    [self.unitesLabel setFrame:CGRectMake((self.bounds.size.width - 69) / 2, 157 * vertShift, 69, 21)];
-    [self.unitesSeg setFrame:CGRectMake(20, 186 * vertShift, self.bounds.size.width - 40, 29)];
-    [self.numberDisplay setFrame:CGRectMake((self.bounds.size.width - 69) / 2, 231 * vertShift, 69, 21)];
-    [self.slider setFrame:CGRectMake(20, 269 * vertShift, self.bounds.size.width - 40, 29)];
+    self.stepper.frame = CGRectMake(20, 32 * vertShift, 94, 29);
+    self.geekSwitch.frame = CGRectMake(self.bounds.size.width - 20 - 51, 31 * vertShift, 51, 31);
+    self.geekSwitchLabel.frame = CGRectMake(self.bounds.size.width - 77 - 91, 36 * vertShift, 91, 21);
+    self.dizainesLabel.frame = CGRectMake((self.bounds.size.width - 69) / 2, 84 * vertShift, 69, 21);
+    self.dizainesSeg.frame = CGRectMake(20, 113 * vertShift, self.bounds.size.width - 40, 29);
+    self.unitesLabel.frame = CGRectMake((self.bounds.size.width - 69) / 2, 157 * vertShift, 69, 21);
+    self.unitesSeg.frame = CGRectMake(20, 186 * vertShift, self.bounds.size.width - 40, 29);
+    self.numberDisplay.frame = CGRectMake((self.bounds.size.width - 69) / 2, 231 * vertShift, 69, 21);
+    self.slider.frame = CGRectMake(20, 269 * vertShift, self.bounds.size.width - 40, 29);
     
     int resetButtonY = UIInterfaceOrientationIsLandscape(toInterfaceOrientation) ?
         self.bounds.size.height - 20 - 41 : 419;
-    [self.resetButton setFrame:CGRectMake((self.bounds.size.width - 122) / 2, resetButtonY, 122, 41)];
+    self.resetButton.frame = CGRectMake((self.bounds.size.width - 122) / 2, resetButtonY, 122, 41);
 }
 
 
