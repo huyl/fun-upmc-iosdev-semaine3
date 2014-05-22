@@ -41,7 +41,6 @@
 
 
 @implementation MyView
-@synthesize number, modeGeek;
 
 
 - (id)initWithFrame:(CGRect)frame
@@ -147,12 +146,12 @@
 
 - (void)setNumber:(int)num
 {
-    number = MAX(0, MIN(99, num));
+    _number = MAX(0, MIN(99, num));
     [self updateNumberDisplay];
     [self updateSegs];
     
-    self.stepper.value = number;
-    self.slider.value = number;
+    self.stepper.value = _number;
+    self.slider.value = _number;
 }
 
 - (void)updateNumberDisplay
