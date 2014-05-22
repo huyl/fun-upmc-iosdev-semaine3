@@ -14,3 +14,4 @@ Plateforme de MOOC: [FUN](https://www.france-universite-numerique-mooc.fr/)
 
 ![Screen capture](DizainierGeekScreencap.gif)
 
+- Option: Ça n'utilise pas ARC
