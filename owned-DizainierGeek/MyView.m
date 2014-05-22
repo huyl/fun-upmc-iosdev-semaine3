@@ -119,8 +119,9 @@
 // FIXME: make reset button visible in landscape mode
 - (void)layoutWithOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
+    BOOL squeeze = self.bounds.size.height < 480;
 //    NSLog(@"bounds %@", NSStringFromCGSize(self.bounds.size));
-    float vertShift = UIInterfaceOrientationIsLandscape(toInterfaceOrientation) ? .85 : 1;
+    float vertShift = squeeze ? .85 : 1;
     
     self.stepper.frame = CGRectMake(20, 32 * vertShift, 94, 29);
     self.geekSwitch.frame = CGRectMake(self.bounds.size.width - 20 - 51, 31 * vertShift, 51, 31);
@@ -132,8 +133,7 @@
     self.numberDisplay.frame = CGRectMake((self.bounds.size.width - 69) / 2, 231 * vertShift, 69, 21);
     self.slider.frame = CGRectMake(20, 269 * vertShift, self.bounds.size.width - 40, 29);
     
-    int resetButtonY = UIInterfaceOrientationIsLandscape(toInterfaceOrientation) ?
-        self.bounds.size.height - 20 - 41 : 419;
+    int resetButtonY = squeeze ? self.bounds.size.height - 20 - 41 : 419;
     self.resetButton.frame = CGRectMake((self.bounds.size.width - 122) / 2, resetButtonY, 122, 41);
 }
 
