@@ -13,16 +13,16 @@
 @property (nonatomic) int number;
 @property (nonatomic) BOOL modeGeek;
 
-@property (nonatomic,retain) UIStepper *stepper;
-@property (nonatomic,retain) UILabel *geekSwitchLabel;
-@property (nonatomic,retain) UISwitch *geekSwitch;
-@property (nonatomic,retain) UILabel *dizainesLabel;
+@property (nonatomic,retain) UIStepper          *stepper;
+@property (nonatomic,retain) UILabel            *geekSwitchLabel;
+@property (nonatomic,retain) UISwitch           *geekSwitch;
+@property (nonatomic,retain) UILabel            *dizainesLabel;
 @property (nonatomic,retain) UISegmentedControl *dizainesSeg;
-@property (nonatomic,retain) UILabel *unitesLabel;
+@property (nonatomic,retain) UILabel            *unitesLabel;
 @property (nonatomic,retain) UISegmentedControl *unitesSeg;
-@property (nonatomic,retain) UILabel *numberDisplay;
-@property (nonatomic,retain) UISlider *slider;
-@property (nonatomic,retain) UIButton *resetButton;
+@property (nonatomic,retain) UILabel            *numberDisplay;
+@property (nonatomic,retain) UISlider           *slider;
+@property (nonatomic,retain) UIButton           *resetButton;
 
 - (void)stepperWasTapped:(id)sender;
 - (void)geekSwitchWasChanged:(id)sender;
@@ -88,9 +88,11 @@
                    forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.resetButton];
         
+        // Set the Frames for all controls
         [self layoutWithOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
 
         
+        // Init switcher and corresponding mode
         self.modeGeek = NO;
         self.geekSwitch.on = self.modeGeek;
         
