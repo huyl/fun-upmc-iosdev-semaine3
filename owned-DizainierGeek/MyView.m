@@ -52,7 +52,6 @@
         NSLog(@"stepper retaincount %d", [_stepper retainCount]);
         [self.stepper addTarget:self action:@selector(stepperWasTapped:) forControlEvents:UIControlEventValueChanged];
         [self addSubview:self.stepper];
-        [_stepper release];
 
         _geekSwitch = [[[UISwitch alloc] init] autorelease];
         [self.geekSwitch addTarget:self action:@selector(geekSwitchWasChanged:)
