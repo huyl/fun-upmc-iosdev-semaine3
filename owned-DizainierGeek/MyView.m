@@ -8,36 +8,29 @@
 
 #import "MyView.h"
 
-@interface MyView ()
 
+@interface MyView ()
 @property (nonatomic) int number;
 @property (nonatomic) BOOL modeGeek;
 
-@property (nonatomic) UILabel *numberDisplay;
+@property (nonatomic,retain) UIStepper *stepper;
+@property (nonatomic,retain) UILabel *geekSwitchLabel;
+@property (nonatomic,retain) UISwitch *geekSwitch;
+@property (nonatomic,retain) UILabel *dizainesLabel;
+@property (nonatomic,retain) UISegmentedControl *dizainesSeg;
+@property (nonatomic,retain) UILabel *unitesLabel;
+@property (nonatomic,retain) UISegmentedControl *unitesSeg;
+@property (nonatomic,retain) UILabel *numberDisplay;
+@property (nonatomic,retain) UISlider *slider;
+@property (nonatomic,retain) UIButton *resetButton;
 
-@property (nonatomic) UISwitch *geekSwitch;
-- (void)geekSwitchWasChanged:(id)sender;
-
-@property (nonatomic) UIStepper *stepper;
 - (void)stepperWasTapped:(id)sender;
-
-@property (nonatomic) UISegmentedControl *dizainesSeg;
+- (void)geekSwitchWasChanged:(id)sender;
 - (void)dizainesSegWasTapped:(id)sender;
-
-@property (nonatomic) UISegmentedControl *unitesSeg;
 - (void)unitesSegWasTapped:(id)sender;
-@property (nonatomic) UISlider *slider;
 - (void)sliderWasChanged:(id)sender;
-
-@property (nonatomic) UIButton *resetButton;
 - (void)resetWasTapped:(id)sender;
-
-@property (nonatomic) UILabel *geekSwitchLabel;
-@property (nonatomic) UILabel *dizainesLabel;
-@property (nonatomic) UILabel *unitesLabel;
-
 @end
-
 
 
 @implementation MyView
@@ -48,7 +41,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         _stepper = [[[UIStepper alloc] init] autorelease];
-        NSLog(@"stepper retaincount %d", [_stepper retainCount]);
         [self.stepper addTarget:self action:@selector(stepperWasTapped:) forControlEvents:UIControlEventValueChanged];
         [self addSubview:self.stepper];
 
