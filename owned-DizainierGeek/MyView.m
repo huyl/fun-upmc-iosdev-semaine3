@@ -116,7 +116,6 @@
     return self;
 }
 
-// FIXME: make reset button visible in landscape mode
 - (void)layoutWithOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
     BOOL squeeze = self.bounds.size.height < 480;
