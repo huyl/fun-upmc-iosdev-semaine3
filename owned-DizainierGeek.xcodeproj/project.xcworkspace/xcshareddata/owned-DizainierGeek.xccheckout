@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6AC0664C-950A-46B6-8F12-A3D12AC6F6CC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>owned-DizainierGeek</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>834693E3-1534-488B-8301-24336559E02B</key>
+		<string>ssh://github.com/huyl/fun-upmc-iosdev-semaine3.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>owned-DizainierGeek.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>834693E3-1534-488B-8301-24336559E02B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/huyl/fun-upmc-iosdev-semaine3.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>834693E3-1534-488B-8301-24336559E02B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>834693E3-1534-488B-8301-24336559E02B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>owned-DizainierGeek</string>
+		</dict>
+	</array>
+</dict>
+</plist>
